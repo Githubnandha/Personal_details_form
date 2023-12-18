@@ -1,0 +1,125 @@
+<!doctype html>
+<htm lang="en">
+	<head>
+		<title>Form&inputs</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="main.css" type="text/css">
+	</head>
+	<body>
+       <form action="https://httpbin.org/get" method="get" target="blank">
+       	 <fieldset>
+       	 <legend>Personal info</legend>
+       	 <p>
+       	 <label for="firstName">Firstname: </label>
+       	 <input type="text" 
+       	        name="firstName" 
+       	        id="firstName" 
+       	        placeholder="initial"
+       	        autocomplete="on" 
+       	        required> <!--required = compulsory input--> 
+       	 </p>
+       	 <p>
+       	 <label for="lastName">Lastname: </lable>
+       	 <input type="text"
+       	        name="lastName"
+       	        id="lastName"
+       	        placeholder="fullname"
+       	        autocomplete="on"
+       	        required>
+        </p>
+        <p>
+        <label for="passWord">Password: </label>
+        <input type="password"
+               name="passWord"
+               id="passWord"
+               placeholder="8-digit"
+               required> 
+        </p>
+        <p>
+        <label for="phoneNbr">PhoneNumber: </label>
+        <input type="tel" 
+               name="phoneNbr"
+               id="phoneNbr"
+               placeholder="10-digit"
+               required
+               pattern="[0-9]{3}[0-9]{3}[0-9]{4}" >
+        </p>
+        <p>
+        <label for="year">Fav year: </label>
+        <input type="number"
+               name="year"
+               id="year"
+               min="2008" max="2022"
+               value="2019"
+               step="2"
+               required>
+         </p>  
+       <fieldset>
+        <legend>Gender</legend>
+        <input type="radio" 
+               name="gender"
+               id="male"
+               value="male">     
+       <label for="male">Male</label>
+        <br>
+       <input type="radio"
+               name="gender"
+               id="female"
+               value="female">
+        <label for="female">Female</label>
+       </fieldset>
+       <p>
+              <label for="pgmlang">Programming language:</label> <br>
+              <input type="checkbox" 
+                     name="pgmlang"
+                     id="c++"
+                     value="pgmlang">
+              <label for="c++">c++</label>
+              <br>
+              <input type="checkbox"
+                     name="pgmlang"
+                     id="java"
+                     value="pgmlang">
+              <label for="java">java</label>
+              <br>
+              <input type="checkbox"
+                     name="pgmlang"
+                     id="python"
+                     value="pgmlang">
+              <label for="python">python</label>
+              <br>
+              <input type="checkbox"
+                     name="pgmlang"
+                     id="javascript"
+                     value="pgmlang">
+              <label for="javascript">javascript</label>
+       </p>
+        <p>
+        <label for="content">Fav content:</label>
+        <select name="content" id="content">
+        	<optgroup label="Fullstack web">
+                <option value="frontEnd">Frontend</option>
+                <option value="backEnd">Backend</option>
+                <option value="fullStack" selected>Fullstack</option>
+            </optgroup>
+            <optgroup label="Technical">
+                <option value="cyberSecurity">Cyber security</option>
+                <option value="dataScientist">Data scientist</option>
+                <option value="dataAnalysist">Data Analysist</option>
+            </optgroup>
+        </select>
+        </p>
+        <fieldset>
+              <legend>Address</legend>
+              <label for="address">Enter address: </label> <br>
+              <textarea name="address"
+                        id="address"
+                        cols="30" rows="10"
+                        placeholder="type your address">
+              </textarea>
+        </fieldset>
+        <center><button type="submit">Submit</button>
+        <button type="reset">Reset</button></center>
+       </form>
+    </body>
+</html>
